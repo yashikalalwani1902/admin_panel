@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <title>Admin panel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>Brand.</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="search here">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="imgs/user.png" alt="user-icon">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li type="none">
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <div> Login </div>
+                    </a>
+                </li>
+                <li type="none">
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div> Dashboard </div>
+                    </a>
+                </li>
+                <li type="none">
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <div> Listings </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="numbers">1k+</div>
+                        <div class="card-name">Log-in\Sign-up</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="numbers">51</div>
+                        <div class="card-name"> Average visitors</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-at"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="numbers">7k+</div>
+                        <div class="card-name">Downloads</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                   <h2>Earnings(past 12 months)</h2>
+                   <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart" id="doughnut-chart">
+                    <h2> Employees </h2>
+                    <canvas id="doughnut"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chart2.js"></script>
+</body>
+</html>
